@@ -1,4 +1,4 @@
-var dbc = require('./lib/create-db');
+var dbc = require('./lib/create-db')
 
 var db = {}
 
@@ -30,4 +30,4 @@ Object.keys(mime).forEach(function (suffix) {
 })
 
 // write db
-require('./lib/write-db')('db.json', db)
+require('./lib/write-extensions-db')('extensions-db.json', db)

@@ -45,6 +45,7 @@
   },
   "scripts": {
     "build": "node scripts/build",
+    "build-extensions": "node scripts/build-extensions",
     "fetch": "gnode scripts/fetch-apache && gnode scripts/fetch-iana && gnode scripts/fetch-nginx",
     "lint": "eslint .",
     "test": "mocha --reporter spec --bail --check-leaks test/",

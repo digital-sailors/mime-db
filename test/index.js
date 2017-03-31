@@ -60,3 +60,19 @@ describe('mime-db', function () {
     assert.equal(db['video/x-matroska'].extensions[0], 'mkv')
   })
 })
+
+var extensionsDb = require('../extensions-db.json')
+
+describe('extensions-db', function () {
+  it('should contain extension txt mapped to text/plain', function () {
+    assert.equal(extensionsDb['txt'], 'text/plain')
+  })
+
+  it('should contain extension iso mapped to application/x-iso9660-image', function () {
+    assert.equal(extensionsDb['iso'], 'application/x-iso9660-image')
+  })
+
+  it('should contain extension m4a mapped to audio/mp4', function () {
+    assert.equal(extensionsDb['m4a'], 'audio/mp4')
+  })
+})

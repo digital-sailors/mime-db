@@ -57,6 +57,13 @@ Each mime type has the following properties:
 
 If unknown, every property could be `undefined`.
 
+## Extensions database
+
+The JSON file `extensions-db.json` is a reverse mapping from extension to mime type. The database contains ambiguities for this mapping direction and the mapping may not be stable. However, two rules try to limit ambiguities:
+
+- Any available mime type is preferred over the mime type `application/octet-stream`. E.g. `application/x-iso9660-image` is preferred for the extension `iso` over `application/x-iso9660-image`
+- Mime types without an `x-` are preferred over mime types with `x-`. E.g. the extension `m4a` maps to the mime type `audio/mp4` and not to the mime type `audio/x-m4a`
+
 ## Contributing
 
 To edit the database, only make PRs against `src/custom.json` or
